@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Your Portfolio</title>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#works">Works</a></li>
+        <li><a href="#certificates">Certificates</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home" class="section-home parallax">
+    <div class="container">
+      <div class="intro-container">
+        <div class="intro-text">
+          <h1><span id="typing-text"></span></h1>
+        </div>
+      </div>
+    </div>  
+  </section>
+  
+  
+
+  <section id="about" class="section-about parallax">
+    <div class="container slide-up">
+      <div class="text-content">
+        <h1>About me</h1>
+        <p>
+          Hi, I'm Harshavardhini A S, an aspiring AI Engineer, currently pursuing a degree in Artificial Intelligence and Data Science.
+          I am passionate about applying my knowledge of Machine Learning techniques and Deep Learning networks to solve real-world problems.
+        </p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Add this to your existing HTML document -->
+
+<section id="skills" class="section-home parallax">
+  <div class="container">
+    <div class="column technical-skills">
+      <h1>Technical Skills</h1>
+      <p>Python</p>
+      <p>C</p>
+      <p>SQL</p>
+      <p>HTML</p>
+      <p>CSS</p>
+    </div>
+
+    <div class="column known-languages">
+      <h1>Known Languages</h1>
+      <p>Tamil</p>
+      <p>English</p>
+      <p>Hindi</p>
+      <p>Telugu</p>
+    </div>
+
+    <div class="column image-column">
+      <img src="skill.png" alt="Skill Image">
+    </div>
+  </div>
+</section>
+
+  
+
+ <!-- Add this to your existing HTML document -->
+
+<section id="works" class="section-projects parallax">
+  <div class="container">
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <h1>Hackathon Participation</h1>
+        </div>
+        <div class="flip-card-back">
+          <p>CODE-A-THON(technoVIT22)</p>
+          <p>CONOCITHON 2.0(St.joseph's IEEE)</p>
+          <p>GDSC</p>
+          <p>Google Ai Campus Fest</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <h1>Projects</h1>
+        </div>
+        <div class="flip-card-back">
+          <p>Parking Space Detection and Counter</p>
+          <p>Chatbot</p>
+          <p>Movie Suggestion Maker</p>
+          <p>Predict the presence of Heart Disease Using Decision Tree Classifier</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <h1>Internships</h1>
+        </div>
+        <div class="flip-card-back">
+          <p>Geonxlogic-Intern based on Machine learning</p>
+          <p>Technohacks-Intern based on Data analytics</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <h1>Badges</h1>
+        </div>
+        <div class="flip-card-back">
+          <p>Earned the Golden Badge in Python (HackerRank)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="certificates" class="section-projects parallax">
+  <div class="gallery-container">
+    <h1>My Certificates</h1>
+    <div class="image-scroll-wrapper">
+      <div class="image-scroll-container" id="imageScrollContainer">
+        <div class="image-card">
+          <img src="certificate1.jpg" alt="Certificate 1" onclick="openModal(this)">
+        </div>
+      <div class="image-card">
+        <img src="certificate2.jpg" alt="Certificate 2" onclick="openModal(this)">
+      </div>
+      <div class="image-card">
+        <img src="certificate3.jpg" alt="Certificate 3" onclick="openModal(this)">
+      </div>
+      <div class="image-card">
+        <img src="certificate4.jpg" alt="Certificate 4" onclick="openModal(this)">
+      </div>
+      <div class="image-card">
+        <img src="certificate5.jpg" alt="Certificate 5" onclick="openModal(this)">
+      </div>
+      <div class="image-card">
+        <img src="certificate6.jpg" alt="Certificate 6" onclick="openModal(this)">
+      </div>
+      <div class="image-card">
+        <img src="certificate7.jpg" alt="Certificate 7" onclick="openModal(this)">
+      </div>
+      <div class="image-card">
+        <img src="certificate8.jpg" alt="Certificate 8" onclick="openModal(this)">
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal for zooming in on an image -->
+  <div id="imageModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="zoomedImage">
+  </div>
+</section>
+
+<!-- Your script for parallax scrolling and image scrolling -->
+
+<script src="script.js"></script>
+
+
+  <!-- Add other sections similarly -->
+
+  <script>
+    window.addEventListener('scroll', function() {
+      const parallax = document.querySelectorAll('.parallax');
+      let scrollPosition = window.pageYOffset;
+
+      parallax.forEah(function(section) {
+        let offset = section.offsetTop;
+        section.style.backgroundPositionY = (scrollPosition - offset) * 0.8 + 'px';
+      });
+    });
+  </script>
+  
+</body>
+</html>
+
